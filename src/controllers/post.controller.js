@@ -5,7 +5,7 @@ const {post} = require('../app');
 exports.getAllPost = async (req, res) => { //request-respuesta
     //res.json(posts);
     try{
-        const posts = await Post.find();
+        const post = await Post.find();
         res.json(post);
     }catch(err){res.status(500).json({message:'Error al al obtener todos los post', error: error.message})}
 }
